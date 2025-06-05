@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CineRadar – Your Movie Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      background: #e8f1f5;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      width: 30%;
+      background: linear-gradient(135deg, #004e64, #008793);
+      color: #ffffff;
+      padding: 24px 30px 24px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      box-shadow: 4px 0 20px rgba(0, 0, 0, 0.12);
+      overflow-y: auto;
+      max-height: 100vh;
+    }
+
+    .sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .sidebar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+    }
+    .sidebar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: 1.2px;
+      text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    }
+
+    .sidebar .description {
+      font-size: 16px;
+      color: #d0f0fa;
+      line-height: 1.5;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 18px 20px;
+      border-radius: 16px;
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+      user-select: none;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .sidebar h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 12px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.25);
+      padding-bottom: 6px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    }
+
+    .prompt {
+      background-color: rgba(255, 255, 255, 0.12);
+      padding: 12px 18px;
+      border-radius: 14px;
+      font-size: 15px;
+      line-height: 1.4;
+      user-select: text;
+      cursor: default;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .prompt:hover {
+      background-color: rgba(255, 255, 255, 0.28);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Chat Section */
+    .chat-container {
+      width: 70%;
+      background: #f9f9f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .chat-box {
+      width: 100%;
+      height: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      border: 2px solid #e0e0e0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar" role="complementary" aria-label="Movie prompt and instructions sidebar">
+    <h2>🎬 CineRadar</h2>
+    <p class="description">
+      Whether you want recommendations, streaming info, or fun movie facts — this chatbot is your go-to movie guide! Start by copying any prompt below or simply ask it anything movie-related.
+    </p>
+
+    <h3>🍿 Popular Picks</h3>
+    <div class="prompt">Weekend Movie Suggestions</div>
+    <div class="prompt">Trending Must-Watch Films</div>
+    <div class="prompt">Feel-Good Movie Picks</div>
+
+    <h3>🕵️‍♂️ Genre Highlights</h3>
+    <div class="prompt">Best Thrillers to Watch</div>
+    <div class="prompt">Hidden Sci-Fi Gems</div>
+    <div class="prompt">Oscar-Winning Directors</div>
+
+    <h3>📺 Streaming Info</h3>
+    <div class="prompt">Where to Stream ‘Inception’</div>
+    <div class="prompt">Netflix’s Top Movies Today</div>
+    <div class="prompt">Prime Video Latest Releases</div>
+    <div class="prompt">New on Disney+ Hotstar</div>
+  </div>
+
+  <div class="chat-container">
+    <div class="chat-box">
+      <iframe src="https://copilotstudio.microsoft.com/environments/Default-ab153b9f-2c75-48bd-95c3-84fedcc2b491/bots/cre80_undefinedNameOfMovieRecommendationBot/webchat?__version__=2"></iframe>
+    </div>
+  </div>
+
+</body>
+</html>
